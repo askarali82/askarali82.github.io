@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Askarali Azimov — Desktop Software Developer</title>
+<meta name="description" content="Askarali Azimov — desktop software developer specializing in scientific instrumentation and business systems, based in Samarkand, Uzbekistan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #10161a;
+    --bg-elevated: #171f24;
+    --bg-elevated-2: #1d262c;
+    --text: #e9e6df;
+    --text-muted: #9fa8ac;
+    --rule: #2a343a;
+    --accent: #d3a94e;
+    --accent-soft: rgba(211, 169, 78, 0.14);
+    --teal: #5fa8a0;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --mono: 'IBM Plex Mono', 'Courier New', monospace;
+    --max-w: 740px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Nav */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(16, 22, 26, 0.88);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+  }
+  nav .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+  }
+  .nav-name {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: var(--text);
+  }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a { color: var(--text-muted); font-size: 0.95rem; }
+  .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+  /* Hero */
+  header.hero {
+    padding: 96px 0 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .spectrum-bg {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .hero-content { position: relative; }
+  h1.name {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .role {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin: 0 0 22px;
+    max-width: 34ch;
+  }
+  .meta-line {
+    font-family: var(--mono);
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin: 0 0 28px;
+  }
+  .hero-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .hero-links a {
+    font-size: 0.95rem;
+    color: var(--text);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+  }
+  .hero-links a:hover { border-color: var(--accent); text-decoration: none; color: var(--accent); }
+
+  /* Sections */
+  section { padding: 56px 0; border-top: 1px solid var(--rule); }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin: 0 0 22px;
+  }
+
+  .about p { color: var(--text); max-width: 62ch; }
+  .about p + p { margin-top: 16px; }
+
+  .expertise {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 32px;
+  }
+  .expertise div { font-size: 0.95rem; }
+  .expertise .label { color: var(--text-muted); font-family: var(--mono); font-size: 0.8rem; display: block; margin-bottom: 3px; }
+
+  /* Projects */
+  .project { margin-bottom: 56px; }
+  .project:last-child { margin-bottom: 0; }
+  .project-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-bottom: 10px;
+  }
+  .project-head h3 {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  .tags { display: flex; gap: 10px; flex-wrap: wrap; }
+  .tag {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--teal);
+    background: rgba(95, 168, 160, 0.1);
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+  .project-desc { color: var(--text-muted); max-width: 60ch; margin: 0 0 18px; }
+  .project-links { margin-top: 14px; display: flex; gap: 20px; font-size: 0.92rem; }
+
+  /* Carousel */
+  .carousel-wrap { position: relative; }
+  .carousel {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule) transparent;
+  }
+  .carousel::-webkit-scrollbar { height: 6px; }
+  .carousel::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
+  .slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: min(340px, 78vw);
+    aspect-ratio: 16 / 10;
+    background: var(--bg-elevated);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-family: var(--mono);
+    overflow: hidden;
+  }
+  .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    background: var(--bg-elevated-2);
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .carousel-btn:hover { background: var(--accent-soft); border-color: var(--accent); }
+  .carousel-btn.prev { left: -14px; }
+  .carousel-btn.next { right: -14px; }
+  @media (max-width: 600px) {
+    .carousel-btn { display: none; }
+  }
+
+  /* Contact */
+  .contact p { max-width: 56ch; color: var(--text-muted); }
+  .contact-links { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+  .contact-links a { font-size: 1rem; color: var(--text); }
+  .contact-links a:hover { color: var(--accent); }
+
+  footer {
+    padding: 28px 0 48px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--rule);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="nav-name">Askarali Azimov</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg class="spectrum-bg" viewBox="0 0 740 90" preserveAspectRatio="none" aria-hidden="true">
+    <polyline
+      points="0,80 40,79 80,77 110,70 130,40 145,15 160,45 180,72 220,74 260,73
+              300,68 320,50 335,30 345,55 360,74 400,75 440,73 470,60 485,35 495,20 505,42 520,70 560,76 600,75 640,74 680,75 740,75"
+      fill="none" stroke="#d3a94e" stroke-width="1.5" stroke-opacity="0.35" />
+  </svg>
+  <div class="wrap hero-content">
+    <h1 class="name">Askarali Azimov</h1>
+    <p class="role">Desktop software developer working across scientific instrumentation and business systems.</p>
+    <p class="meta-line">Samarkand, Uzbekistan · Freelance since 2014</p>
+    <div class="hero-links">
+      <a href="mailto:azimov82@gmail.com">Email</a>
+      <a href="https://github.com/askarali82" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.upwork.com/freelancers/askaraliazimov" target="_blank" rel="noopener">Upwork</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p>I've spent the past 15 years writing Windows software, mostly in Delphi and C++ Builder, for two fairly different worlds: nuclear physics research and small-business retail. At Samarkand State University, where I work as a programmer and scientific researcher, I build tools for gamma spectrometry and environmental radiation monitoring — software that has to get the physics right as much as the code.</p>
+    <p>Outside of that, I take on freelance projects and build the occasional hobby tool, like a free point-of-sale system for small shops in Uzbekistan. I hold a Master's degree in the physics of nuclear and elementary particles from Samarkand State University.</p>
+
+    <div class="expertise">
+      <div><span class="label">Scientific software</span>Gamma spectrometry analysis, Geant4 simulation, hardware interfacing</div>
+      <div><span class="label">Desktop development</span>Delphi and C++ Builder, VCL and FMX</div>
+      <div><span class="label">Business systems</span>Point-of-sale and retail management software</div>
+      <div><span class="label">Languages</span>C, C++, Delphi, SQL</div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>GSProcessor</h3>
+        <div class="tags"><span class="tag">C++</span><span class="tag">ROOT</span><span class="tag">Win32</span></div>
+      </div>
+      <p class="project-desc">An open-source tool for analyzing gamma-ray spectra from NaI(Tl) detectors. It handles peak detection using ROOT's TSpectrum, corrects for temperature-driven spectrum drift with an energy-based rebinning method, and models detector resolution physically rather than relying on curve-fitting alone. The underlying method is described in a peer-reviewed publication.</p>
+
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="gsp-carousel">‹</button>
+        <div class="carousel" id="gsp-carousel">
+          <div class="slide">Screenshot 1<br>(replace with real image)</div>
+          <div class="slide">Screenshot 2</div>
+          <div class="slide">Screenshot 3</div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="gsp-carousel">›</button>
+      </div>
+
+      <div class="project-links">
+        <a href="https://github.com/askarali82/GSProcessor" target="_blank" rel="noopener">View on GitHub</a>
+        <a href="https://link.springer.com/article/10.1007/s10967-024-09969-7" target="_blank" rel="noopener">Read the publication</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>SavdoMarkaz</h3>
+        <div class="tags"><span class="tag">C++ Builder</span><span class="tag">FMX</span></div>
+      </div>
+      <p class="project-desc">A free point-of-sale application built for small businesses in Uzbekistan. It handles sales and inventory, ESC/POS thermal receipt printing, and PDF invoice generation, packaged as a simple Windows installer.</p>
+
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="svd-carousel">‹</button>
+        <div class="carousel" id="svd-carousel">
+          <div class="slide">Screenshot 1<br>(replace with real image)</div>
+          <div class="slide">Screenshot 2</div>
+          <div class="slide">Screenshot 3</div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="svd-carousel">›</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>I'm open to freelance work in desktop application development, especially projects involving scientific or business-critical software.</p>
+    <div class="contact-links">
+      <a href="mailto:azimov82@gmail.com">azimov82@gmail.com</a>
+      <a href="https://github.com/askarali82" target="_blank" rel="noopener">github.com/askarali82</a>
+      <a href="https://www.upwork.com/freelancers/askaraliazimov" target="_blank" rel="noopener">Upwork profile</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Askarali Azimov</div>
+</footer>
+
+<script>
+  document.querySelectorAll('.carousel-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var track = document.getElementById(btn.dataset.target);
+      var slide = track.querySelector('.slide');
+      var step = slide ? slide.getBoundingClientRect().width + 12 : 300;
+      track.scrollBy({ left: btn.classList.contains('next') ? step : -step, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
