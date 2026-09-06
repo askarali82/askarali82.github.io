@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Askarali Azimov — Desktop Software Developer</title>
-<meta name="description" content="Askarali Azimov — desktop software developer specializing in scientific instrumentation and business systems, based in Samarkand, Uzbekistan.">
+<meta name="description" content="Askarali Azimov — desktop software developer working across scientific instrumentation, business systems, and freelance client work, based in Samarkand, Uzbekistan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -172,6 +172,14 @@
     padding: 3px 8px;
     border-radius: 3px;
   }
+  .tag-type {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
   .project-desc { color: var(--text-muted); max-width: 60ch; margin: 0 0 18px; }
   .project-links { margin-top: 14px; display: flex; gap: 20px; font-size: 0.92rem; }
 
@@ -299,7 +307,7 @@
   </svg>
   <div class="wrap hero-content">
     <h1 class="name">Askarali Azimov</h1>
-    <p class="role">Desktop software developer working across scientific instrumentation and business systems.</p>
+    <p class="role">Desktop software developer working across scientific instrumentation, business systems, and freelance client work.</p>
     <p class="meta-line">Samarkand, Uzbekistan · Freelance since 2014</p>
     <div class="hero-links">
       <a href="mailto:azimov82@gmail.com">Email</a>
@@ -311,13 +319,13 @@
 <section id="about" class="about">
   <div class="wrap">
     <h2>About</h2>
-    <p>I've spent the past 15+ years writing Windows software, mostly in C++ and Delphi, for two fairly different worlds: nuclear physics research and small-business retail. At Samarkand State University, where I work as a programmer and scientific researcher, I build tools for gamma spectrometry and environmental radiation monitoring.</p>
-    <p>Outside of that, I take on freelance projects and build the occasional hobby tool, like a free point-of-sale system for small businesses in Uzbekistan. I hold a Master's degree in the physics of nuclear and elementary particles from Samarkand State University.</p>
+    <p>I've spent the past 15+ years writing Windows software, mostly in C++ and Delphi, across a fairly wide range of domains — nuclear physics research, retail, finance, education, and PC utilities. At Samarkand State University, where I work as a programmer and scientific researcher, I build tools for gamma spectrometry and environmental radiation monitoring.</p>
+    <p>As a freelancer, I've built everything from a trading-platform extension and desktop security utilities to clinical assessment tools for therapists and a dictation grader for schools. I also build the occasional hobby tool for myself or to share for free, like a point-of-sale system for small businesses in Uzbekistan. I hold a Master's degree in the physics of nuclear and elementary particles from Samarkand State University.</p>
 
     <div class="expertise">
       <div><span class="label">Scientific software</span>Gamma spectrometry analysis, Geant4 simulation, hardware interfacing</div>
       <div><span class="label">Desktop development</span>Delphi, C++ Builder, Qt Creator, Visual Studio, VCL, FMX, MFC, Qt</div>
-      <div><span class="label">Business systems</span>Point-of-sale and retail management software</div>
+      <div><span class="label">Freelance & client work</span>Trading software, PC utilities, clinical assessment tools, retail and education systems</div>
       <div><span class="label">Languages</span>C, C++, Delphi, SQL</div>
     </div>
   </div>
@@ -330,7 +338,7 @@
     <div class="project">
       <div class="project-head">
         <h3>GSProcessor</h3>
-        <div class="tags"><span class="tag">C++</span><span class="tag">ROOT</span><span class="tag">Win32</span><span class="tag">VCL</span></div>
+        <div class="tags"><span class="tag-type">Personal project</span><span class="tag">C++</span><span class="tag">ROOT</span><span class="tag">VCL</span><span class="tag">Win32</span></div>
       </div>
       <p class="project-desc">An open-source tool for analyzing gamma-ray spectra from NaI(Tl) detectors. It corrects for temperature-driven spectrum drift, handles peak detection using ROOT's TSpectrum, and utilizes a spectrum decomposition method. The underlying method is described in a peer-reviewed publication.</p>
 
@@ -354,7 +362,7 @@
     <div class="project">
       <div class="project-head">
         <h3>SavdoMarkaz</h3>
-        <div class="tags"><span class="tag">C++</span><span class="tag">Win32</span><span class="tag">FMX</span></div>
+        <div class="tags"><span class="tag-type">Personal project — MVP</span><span class="tag">C++</span><span class="tag">FMX</span><span class="tag">Win32</span></div>
       </div>
       <p class="project-desc">A free point-of-sale application built for small businesses in Uzbekistan. It handles sales and inventory, ESC/POS thermal receipt printing, and PDF invoice generation, packaged as a simple Windows installer.</p>
 
@@ -374,13 +382,266 @@
       </div>
     </div>
 
+    <div class="project">
+      <div class="project-head">
+        <h3>GeoFingerprint</h3>
+        <div class="tags"><span class="tag-type">Developed at work</span><span class="tag">C++</span><span class="tag">FMX</span><span class="tag">Win32</span></div>
+      </div>
+      <p class="project-desc">Compares the metal composition of an archaeological find against reference materials — ore and slag — from known mines, and identifies which mine's material the find most closely matches using cosine similarity.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="gfp-carousel">‹</button>
+        <div class="carousel" id="gfp-carousel">
+          <div class="slide"><img src="images/geof.png" alt="GeoFingerprint screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="gfp-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Leaves Area Counter</h3>
+        <div class="tags"><span class="tag-type">Developed at work</span><span class="tag">C++</span><span class="tag">FMX</span><span class="tag">Win32</span></div>
+      </div>
+      <p class="project-desc">Calculates the surface area of flat shapes, such as plant or tree leaves, from scanned BMP images. A reference object of known area is scanned alongside the samples to calibrate the measurement.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="lac-carousel">‹</button>
+        <div class="carousel" id="lac-carousel">
+          <div class="slide"><img src="images/lac.png" alt="Leaves Area Counter screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="lac-carousel">›</button>
+      </div>
+      <div class="project-links">
+        <a href="https://www.dropbox.com/scl/fi/kd6sicrfcc3mm928c5z4z/Leaves-Area-Counter.zip?rlkey=i5aw27s3zwqpgju6uo3ddcqo9&st=taor8rb1&dl=1">Download for Windows</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Qur’onni O‘rgan (Learn Quran)</h3>
+        <div class="tags"><span class="tag-type">Personal project</span><span class="tag">C++</span><span class="tag">FMX</span><span class="tag">Win32</span></div>
+      </div>
+      <p class="project-desc">A personal tool for studying Quranic verses alongside their translation and commentary, built for private use only.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="quo-carousel">‹</button>
+        <div class="carousel" id="quo-carousel">
+          <div class="slide"><img src="images/learn_quran.png" alt="Learn Quran screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="quo-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>LogReport Creator</h3>
+        <div class="tags"><span class="tag-type">Freelance client project</span><span class="tag">C++</span><span class="tag">VCL</span><span class="tag">Win32</span></div>
+      </div>
+      <p class="project-desc">Reads temperature log data from a text file and generates a printable report, exportable to PDF.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="lrc-carousel">‹</button>
+        <div class="carousel" id="lrc-carousel">
+          <div class="slide"><img src="images/logrc-1.png" alt="LogReport Creator screenshot 1"></div>
+          <div class="slide"><img src="images/logrc-2.png" alt="LogReport Creator screenshot 2"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="lrc-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Lightspeed Trader Extension</h3>
+        <div class="tags"><span class="tag-type">Freelance client project</span><span class="tag">C++</span><span class="tag">MFC</span><span class="tag">Win32</span></div>
+      </div>
+      <p class="project-desc">An extension for the Lightspeed Trader platform that pulls real-time market data from IQFeed and executes buy/sell actions according to a configurable trading strategy.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="lst-carousel">‹</button>
+        <div class="carousel" id="lst-carousel">
+          <div class="slide"><img src="images/lstext.png" alt="Lightspeed Trader Extension screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="lst-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Privacy Kit</h3>
+        <div class="tags"><span class="tag-type">Freelance client project</span><span class="tag">C++</span><span class="tag">VCL</span><span class="tag">Win32</span><span class="tag">GDI+</span></div>
+      </div>
+      <p class="project-desc">A desktop utility dashboard bundling a stealth browsing mode, a tool for clearing trackers, browsing history, and cached files, and a malware scanner.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="pk-carousel">‹</button>
+        <div class="carousel" id="pk-carousel">
+          <div class="slide"><img src="images/privacy-kit.png" alt="Privacy Kit screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="pk-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Stealth Kit</h3>
+        <div class="tags"><span class="tag-type">Freelance client project</span><span class="tag">C++</span><span class="tag">VCL</span><span class="tag">Win32</span><span class="tag">GDI+</span></div>
+      </div>
+      <p class="project-desc">A desktop utility dashboard combining a stealth browsing mode, a tracker and cache cleanup tool, and a Tor Browser launcher for anonymous browsing.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="sk-carousel">‹</button>
+        <div class="carousel" id="sk-carousel">
+          <div class="slide"><img src="images/stealth-kit.png" alt="Stealth Kit screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="sk-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>VPN Kit</h3>
+        <div class="tags"><span class="tag-type">Freelance client project</span><span class="tag">C++</span><span class="tag">VCL</span><span class="tag">Win32</span><span class="tag">GDI+</span></div>
+      </div>
+      <p class="project-desc">A branded desktop utility dashboard offering a stealth browsing mode, a PC cleanup tool, and a Tor Browser launcher.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="vpn-carousel">‹</button>
+        <div class="carousel" id="vpn-carousel">
+          <div class="slide"><img src="images/vpn-kit.png" alt="VPN Kit screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="vpn-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Windows Maximizer</h3>
+        <div class="tags"><span class="tag-type">Freelance client project</span><span class="tag">C++</span><span class="tag">VCL</span><span class="tag">Win32</span><span class="tag">GDI+</span></div>
+      </div>
+      <p class="project-desc">A Windows repair dashboard combining a system repair tool, disk diagnostics and cleanup, and a malware scanner.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="wm-carousel">‹</button>
+        <div class="carousel" id="wm-carousel">
+          <div class="slide"><img src="images/repair-kit.png" alt="Windows Maximizer screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="wm-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Diktant</h3>
+        <div class="tags"><span class="tag-type">Freelance client project</span><span class="tag">C++</span><span class="tag">VCL</span><span class="tag">Win32</span></div>
+      </div>
+      <p class="project-desc">Assesses students' dictation writing for secondary schools and lyceums in Uzbekistan, scoring transcriptions against a reference text.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="dik-carousel">‹</button>
+        <div class="carousel" id="dik-carousel">
+          <div class="slide"><img src="images/diktant-1.png" alt="Diktant screenshot 1"></div>
+          <div class="slide"><img src="images/diktant-2.png" alt="Diktant screenshot 2"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="dik-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Davomad</h3>
+        <div class="tags"><span class="tag-type">Personal project</span><span class="tag">C++</span><span class="tag">VCL</span><span class="tag">Indy</span><span class="tag">Win32</span><span class="tag">SQLite</span></div>
+      </div>
+      <p class="project-desc">Tracks daily attendance for pupils, students, and employees across multiple groups, with per-person notes.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="dav-carousel">‹</button>
+        <div class="carousel" id="dav-carousel">
+          <div class="slide"><img src="images/dav-1.png" alt="Davomad screenshot 1"></div>
+          <div class="slide"><img src="images/dav-2.png" alt="Davomad screenshot 2"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="dav-carousel">›</button>
+      </div>
+      <div class="project-links">
+        <a href="https://www.dropbox.com/scl/fi/t83re3jquwfsq9nj19ygm/Davomad.zip?rlkey=bes58jvorvnnhf3ko2f77b6ot&st=d0qqnwnk&dl=1">Download for Windows</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Easy Flash Drive Tool</h3>
+        <div class="tags"><span class="tag-type">Personal project</span><span class="tag">C++</span><span class="tag">VCL</span><span class="tag">Win32</span></div>
+      </div>
+      <p class="project-desc">Formats a USB flash drive to NTFS, toggles whether executables can run from it, and scans its root folder for suspicious files — a lightweight defense against common flash-drive malware.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="eft-carousel">‹</button>
+        <div class="carousel" id="eft-carousel">
+          <div class="slide"><img src="images/efdt.png" alt="Easy Flash Drive Tool screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="eft-carousel">›</button>
+      </div>
+      <div class="project-links">
+        <a href="https://www.dropbox.com/scl/fi/uww0ieunwyo193o/easyfdtool.zip?rlkey=ltybaz1npsm28wjlxkjoxf5s4&st=8d42xbu6&dl=1">Download for Windows</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Encryption Scanner</h3>
+        <div class="tags"><span class="tag-type">Freelance client project</span><span class="tag">C++</span><span class="tag">VCL</span><span class="tag">Win32</span></div>
+      </div>
+      <p class="project-desc">A background service that periodically scans target folders for signs of ransomware activity, logs the results, and sends email alerts, with an admin panel to configure scan intervals and manage the service.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="esc-carousel">‹</button>
+        <div class="carousel" id="esc-carousel">
+          <div class="slide"><img src="images/encs-1.png" alt="Encryption Scanner screenshot 1"></div>
+          <div class="slide"><img src="images/encs-2.png" alt="Encryption Scanner screenshot 2"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="esc-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>ScoreCalculator for COMPS</h3>
+        <div class="tags"><span class="tag-type">Freelance client project</span><span class="tag">C++</span><span class="tag">VCL</span><span class="tag">Win32</span></div>
+      </div>
+      <p class="project-desc">A clinical scoring tool for the Clinical Observations of Motor and Postural Skills (COMPS) assessment, recording results across six motor-skill subtests and calculating a final score.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="comps-carousel">‹</button>
+        <div class="carousel" id="comps-carousel">
+          <div class="slide"><img src="images/score-calc-comps.jpg" alt="ScoreCalculator for COMPS screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="comps-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>ScoreCalculator for PVMIA</h3>
+        <div class="tags"><span class="tag-type">Freelance client project</span><span class="tag">C++</span><span class="tag">VCL</span><span class="tag">Win32</span></div>
+      </div>
+      <p class="project-desc">A clinical scoring tool for the Preschool Visual Motor Integration Assessment (PVMIA), recording a child's drawing and block-pattern subtests and computing an age-based score.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="pvmia-carousel">‹</button>
+        <div class="carousel" id="pvmia-carousel">
+          <div class="slide"><img src="images/score-calc-pvmia.jpg" alt="ScoreCalculator for PVMIA screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="pvmia-carousel">›</button>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>SpkDat</h3>
+        <div class="tags"><span class="tag-type">Personal project</span><span class="tag">Turbo Pascal</span><span class="tag">MS-DOS</span></div>
+      </div>
+      <p class="project-desc">An MS-DOS program written in 2005 to simplify manual spreadsheet work on scintillation gamma spectra and correct for temperature-driven spectrum drift, including a live display of a spectrum from a scintillation gamma spectrometer with periodic autosave to prevent data loss during power outages.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" aria-label="Previous screenshot" data-target="spk-carousel">‹</button>
+        <div class="carousel" id="spk-carousel">
+          <div class="slide"><img src="images/spkdat.png" alt="SpkDat screenshot"></div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next screenshot" data-target="spk-carousel">›</button>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <section id="contact" class="contact">
   <div class="wrap">
     <h2>Contact</h2>
-    <p>I'm open to freelance work in desktop application development, especially projects involving scientific or business-critical software.</p>
+    <p>I'm open to freelance work in desktop application development, across scientific, business, financial, and other domains.</p>
     <div class="contact-links">
       <a href="mailto:azimov82@gmail.com">azimov82@gmail.com</a>
       <a href="https://www.upwork.com/freelancers/askaraliazimov" target="_blank" rel="noopener">Upwork profile</a>
